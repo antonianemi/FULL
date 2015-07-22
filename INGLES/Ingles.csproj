@@ -1,0 +1,344 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7502D78E-AD27-4EBB-99AA-F478968BC9AE}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>INGLES</RootNamespace>
+    <AssemblyName>INGLES</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CustomClass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrmAccesos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAccesos.Designer.cs">
+      <DependentUpon>FrmAccesos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActualizaAlumno.Designer.cs">
+      <DependentUpon>FrmActualizaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizaDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActualizaDocente.Designer.cs">
+      <DependentUpon>FrmActualizaDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizaNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActualizaNivel.Designer.cs">
+      <DependentUpon>FrmActualizaNivel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmActualizaPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmActualizaPeriodo.Designer.cs">
+      <DependentUpon>FrmActualizaPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBoletas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBoletas.Designer.cs">
+      <DependentUpon>FrmBoletas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDocentePrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDocentePrincipal.Designer.cs">
+      <DependentUpon>FrmDocentePrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminaAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminaAlumno.Designer.cs">
+      <DependentUpon>FrmEliminaAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminaDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminaDocente.Designer.cs">
+      <DependentUpon>FrmEliminaDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminaNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminaNivel.Designer.cs">
+      <DependentUpon>FrmEliminaNivel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEliminaPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEliminaPeriodo.Designer.cs">
+      <DependentUpon>FrmEliminaPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmNivelPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmNivelPrincipal.Designer.cs">
+      <DependentUpon>FrmNivelPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPerfiles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPerfiles.Designer.cs">
+      <DependentUpon>FrmPerfiles.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPeriodoPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPeriodoPrincipal.Designer.cs">
+      <DependentUpon>FrmPeriodoPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistraDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistraDocente.Designer.cs">
+      <DependentUpon>FrmRegistraDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistraNivel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistraNivel.Designer.cs">
+      <DependentUpon>FrmRegistraNivel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistraPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistraPeriodo.Designer.cs">
+      <DependentUpon>FrmRegistraPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistrarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistrarAlumno.Designer.cs">
+      <DependentUpon>FrmRegistrarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmAlumnoPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAlumnoPrincipal.Designer.cs">
+      <DependentUpon>FrmAlumnoPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmReportes.Designer.cs">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRespaldos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRespaldos.Designer.cs">
+      <DependentUpon>FrmRespaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmUsuarios.Designer.cs">
+      <DependentUpon>FrmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IForm.cs" />
+    <Compile Include="PRINCIPAL.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PRINCIPAL.Designer.cs">
+      <DependentUpon>PRINCIPAL.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAccesos.resx">
+      <DependentUpon>FrmAccesos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmActualizaAlumno.resx">
+      <DependentUpon>FrmActualizaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmActualizaDocente.resx">
+      <DependentUpon>FrmActualizaDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmActualizaNivel.resx">
+      <DependentUpon>FrmActualizaNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmActualizaPeriodo.resx">
+      <DependentUpon>FrmActualizaPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmAlumnoPrincipal.resx">
+      <DependentUpon>FrmAlumnoPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBoletas.resx">
+      <DependentUpon>FrmBoletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDocentePrincipal.resx">
+      <DependentUpon>FrmDocentePrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminaAlumno.resx">
+      <DependentUpon>FrmEliminaAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminaDocente.resx">
+      <DependentUpon>FrmEliminaDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminaNivel.resx">
+      <DependentUpon>FrmEliminaNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEliminaPeriodo.resx">
+      <DependentUpon>FrmEliminaPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmNivelPrincipal.resx">
+      <DependentUpon>FrmNivelPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPerfiles.resx">
+      <DependentUpon>FrmPerfiles.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPeriodoPrincipal.resx">
+      <DependentUpon>FrmPeriodoPrincipal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistraDocente.resx">
+      <DependentUpon>FrmRegistraDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistraNivel.resx">
+      <DependentUpon>FrmRegistraNivel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistraPeriodo.resx">
+      <DependentUpon>FrmRegistraPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistrarAlumno.resx">
+      <DependentUpon>FrmRegistrarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmReportes.resx">
+      <DependentUpon>FrmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PRINCIPAL.resx">
+      <DependentUpon>PRINCIPAL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
+    <None Include="Periodos.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Objetos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\INGLESBLL\InglesBLL.csproj">
+      <Project>{D7AECE8D-3721-451F-BE46-9C32989F3B1A}</Project>
+      <Name>InglesBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\INGLESENTITY\InglesEntity.csproj">
+      <Project>{19834442-A009-444D-99A1-16150A017FEE}</Project>
+      <Name>InglesEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

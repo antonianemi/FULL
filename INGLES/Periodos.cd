@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="INGLES.FrmRegistraPeriodo">
+    <Position X="4.5" Y="0.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>gAAAEQAIACCABBAAAACAABICAAAQAAAQgAgAAiAAAAA=</HashCode>
+      <FileName>FrmRegistraPeriodo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="INGLES.FrmEliminaPeriodo" Collapsed="true">
+    <Position X="2.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AQAAAIAAACAAABAAAACQAAICAAAAAAAACCgAAAAAIAI=</HashCode>
+      <FileName>FrmEliminaPeriodo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="INGLES.FrmActualizaPeriodo" Collapsed="true">
+    <Position X="0.5" Y="1.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>EQYAAYAIACAAQBAAAACAAAaCIAAAAAAQmCgAAAAQIEM=</HashCode>
+      <FileName>FrmActualizaPeriodo.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.4" />
+</ClassDiagram>

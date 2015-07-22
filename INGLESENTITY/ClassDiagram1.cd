@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="InglesEntity.Nivel">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAEAQAAAEAgBAQEAAABAAASAAAAAEIIAAAAAAACAAA=</HashCode>
+      <FileName>Nivel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InglesEntity.Carrera">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAEAAAAAAAAAIAAQCAAAAAAAAIAAAA=</HashCode>
+      <FileName>Carrera.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InglesEntity.Calificacion">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAQAAAIAAAAAEAAAYAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Calificacion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InglesEntity.Persona" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.75" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAQAAAQAAAAAEACIABAEEAAAIBQAAAAAAAAgAIAAgA=</HashCode>
+      <FileName>Persona.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InglesEntity.Alumno">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAAAAAAAAACAAgAABAAAAAAQIAAAAAAAAA=</HashCode>
+      <FileName>Alumno.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InglesEntity.Curso">
+    <Position X="9.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAABBAAAYAAgAABAAgAIIAIAAAAAEAAA=</HashCode>
+      <FileName>Curso.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InglesEntity.Horario">
+    <Position X="11.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAQAAACAAAAAEAAAAgAAAAQAAgCQAAAAAAAAUAAA=</HashCode>
+      <FileName>Horario.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="InglesEntity.Docente">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Docente.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Tahoma" Size="8.4" />
+</ClassDiagram>
