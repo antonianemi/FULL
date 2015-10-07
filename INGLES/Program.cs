@@ -13,7 +13,7 @@ namespace Ingles
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PRINCIPAL());
+            Application.Run(new frmLogin());
         }
     }
 }
