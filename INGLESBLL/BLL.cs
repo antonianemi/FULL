@@ -4,7 +4,6 @@ using BaseAcces;
 using InglesEntity;
 using System.Collections.Generic;
 using System.Linq;
-using AutoMapper;
 
 namespace InglesBLL
 {

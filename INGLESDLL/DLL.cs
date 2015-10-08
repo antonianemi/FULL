@@ -16,8 +16,6 @@ namespace InglesDLL
         {
 
         }
-
-        
         
         #region REGISTRADORES
 

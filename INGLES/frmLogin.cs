@@ -13,7 +13,7 @@ using System.Windows.Forms;
 namespace Ingles
 {
 
-    public partial class frmLogin : Form
+    public partial class frmLogin : FormBase 
     {
 
         public frmLogin()
@@ -38,22 +38,9 @@ namespace Ingles
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-            /*Capturar l*/
-            
-            /* Enviar credenciales para login Las validaciones las hara la pantalla y nomas se le pasara al bll ya dijgerido*/
-
-            if (this.ValidateChildren())
-            {
-                MessageBox.Show("Faltan Campos Por Validar");
-            }
-            else
-            {
-                MessageBox.Show("Listo Ya LLenaste El formulario Correctamente!!!!");
-            }
+        
         }
         
-
-
 
 
         private void ValidaCampos(object sender, CancelEventArgs e)
@@ -63,7 +50,7 @@ namespace Ingles
                 switch (((TextBox)sender).Name.ToUpper()){
 
                     case "TXT_NAMEUSER":
-                        if (txt_NameUser.Text == string.Empty)
+                        if (txt_NameUser.Text == string.Empty) 
                         Error_Login.SetError(txt_NameUser, "Este campo no puede quedar vacio");
                         break;
 
@@ -74,9 +61,11 @@ namespace Ingles
                     default:
                         Error_Login.Clear();
                         break;
-                }
-
+                }                
             }
+
+            
+            
         }
 
        
