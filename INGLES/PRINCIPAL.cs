@@ -6,18 +6,34 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using InglesEntity;
+
+
 
 namespace Ingles
 {
-
-
-    public partial class PRINCIPAL : Form, IForm
+    public partial class PRINCIPAL : Form
     {
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private Session _Session { set; get; }
+
         private int childFormNumber = 0;
 
-        public PRINCIPAL()
-        {
-            InitializeComponent();
+        public PRINCIPAL(Session obj)
+        {    
+            if (obj != null)
+            {
+                _Session = obj;
+                InitializeComponent();
+                FillInformationPrincipal();
+            }
+            else
+            {
+                /*se intento acceder sin una session activa*/
+            }
         }
 
         private void showNewForm(object sender, EventArgs e)
@@ -193,22 +209,7 @@ namespace Ingles
         {
             MessageBox.Show(msg);
         }
-
-        public void clearControl()
-        {
-            
-        }
-
-        public void Initialized()
-        {
-
-        }
-
-        public void validate()
-        {
-           
-        }
-
+      
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
@@ -224,9 +225,6 @@ namespace Ingles
 
         }
 
-
-
-
         private Form MdiChildExist(String sNombreChild)
         {
             foreach (Form frmExiste in this.MdiChildren)
@@ -235,6 +233,37 @@ namespace Ingles
             return null;
         }
 
-       
+
+        /// <summary>
+        /// Se encarga de printar la informacion principal en el formulario.
+        /// </summary>
+        private void FillInformationPrincipal()
+        {
+            this.Text = _Session.User.Nombre;
+            FillMenu();
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        private void FillMenu()
+        {
+            List<object> items = new List<object>();
+            foreach (var item in this.menuStrip.Items)
+            {                
+                items.Add(item);
+            }
+
+
+        }        
+
+        /// <summary>
+        /// Establece la ecena en la pantalla basada en uno de los ecenarios predefinidos.
+        /// </summary>
+        private void SetScenaPantalla()
+        {
+
+        }
+
+
     }
 }

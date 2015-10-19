@@ -18,7 +18,6 @@ namespace INGLES
         /// Constructor para este control.
         /// </summary>
         public CustomTree() : base() { }
-
         /// <summary>
         /// Representa una lista de periodos para dibujar en el treeview.
         /// </summary>

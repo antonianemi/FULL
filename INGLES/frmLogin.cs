@@ -6,8 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-
-
+using InglesEntity;
+using InglesBLL;
 
 
 namespace Ingles
@@ -15,59 +15,34 @@ namespace Ingles
 
     public partial class frmLogin : FormBase 
     {
+        AutenticationManagerBLL _bll;
+
+        public Session _session { get; set; }
 
         public frmLogin()
-        {
-            
-            /* Inicializar su BLL 
-            El bll debe responder a los eventos de este formulario de tal forma que 
-
-            Solicitar a AutenticationManagerBLL mediante el metodo login que 
-            valide las credenciales del usuario.
-
-
-            */
-
-
+        {            
             InitializeComponent();
+
+
+            _validaciones.ErrorProvider = ErrP_Login;                        
+            _validaciones.Add(new ValidatorTextBoxRequired(this.txt_NameUser));
+            _validaciones.Add(new ValidatorTextBoxApellidoMaterno(this.txt_NameUser));
+            _validaciones.Add(new ValidatorTextBoxRequired(this.txt_Password));            
+            _bll = new AutenticationManagerBLL();
+
         }
-
-
 
 
 
         private void btn_Login_Click(object sender, EventArgs e)
         {
-        
-        }
-        
+            _validaciones.ExecuteValidation();// this is very important!!!   in this instruction we send to validate the controls of form 
 
-
-        private void ValidaCampos(object sender, CancelEventArgs e)
-        {
-            if (sender.GetType().ToString().ToUpper().Equals("SYSTEM.WINDOWS.FORMS.TEXTBOX"))
-            {
-                switch (((TextBox)sender).Name.ToUpper()){
-
-                    case "TXT_NAMEUSER":
-                        if (txt_NameUser.Text == string.Empty) 
-                        Error_Login.SetError(txt_NameUser, "Este campo no puede quedar vacio");
-                        break;
-
-                    case "TXT_PASSWORD":
-                        if (txt_Password.Text == string.Empty)
-                            Error_Login.SetError(txt_Password, "Este campo no puede quedar vacio");
-                        break;
-                    default:
-                        Error_Login.Clear();
-                        break;
-                }                
+            if (_validaciones.IsValid) { 
+                _session = _bll.DoLogin(new Credentials(this.txt_NameUser.Text, this.txt_Password.Text));
+                new PRINCIPAL(_session).Show();
+                this.Hide();
             }
-
-            
-            
-        }
-
-       
+        }    
     }
 }

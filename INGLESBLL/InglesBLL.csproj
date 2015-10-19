@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AutenticationManagerBLL.cs" />
     <Compile Include="BLL.cs" />
     <Compile Include="BaseBusiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
