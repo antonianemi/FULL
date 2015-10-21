@@ -7,6 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
+
+
+
 
 namespace Ingles
 {
@@ -24,8 +28,6 @@ namespace Ingles
         }
         
     }
-
-
     
     
     /// <summary>
@@ -38,7 +40,9 @@ namespace Ingles
         /// 
         /// </summary>
         public bool IsValid { get; set; }
-        
+
+        public bool IsSave { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
@@ -88,6 +92,8 @@ namespace Ingles
         /// </summary>
         public void ExecuteValidation()
         {
+
+            
             int count = 0;
             if (_ErrorProvider != null)
             {
@@ -101,14 +107,11 @@ namespace Ingles
                         count++;
                     
                 }
-                if (count == _validacionesTextBox.Count)                
+                if (count.Equals(_validacionesTextBox.Count)) { 
                     IsValid = true;
-                
+                    IsSave = true;
+                }
             }
-
-
-
-
 
 
             if(_ErrorProvider == null)
@@ -117,9 +120,15 @@ namespace Ingles
                 {
                     item.Validate();
                     if (item.IsValid)
-                         IsValid = true;
-                    
+                        count++;
                 }
+                if (count.Equals(_validacionesTextBox.Count))
+                {
+                    IsValid = true;
+                    IsSave = true;
+                }
+
+
             }
 
 
@@ -132,6 +141,9 @@ namespace Ingles
 
 
     }
+
+
+
 
 
 
@@ -146,10 +158,9 @@ namespace Ingles
         protected TextBox _control { set; get; }
         protected RadioButton _rdbcontrol { set; get; }
         protected DateTimePicker _dtmcontrol { set; get; }
-
-
+        protected string pattern;
         public bool IsValid { set; get; }
-
+        protected string Mensaje = "Campo invalido";
         public ItemValidarTextBox(TextBox control)
         {
             this._control = control;
@@ -162,7 +173,16 @@ namespace Ingles
         /// </summary>
         public virtual void Validate()
         {
-
+            if (Regex.IsMatch(_control.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _control.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _control.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
         /// <summary>
         /// Manifiesta el error en un proveedor de errores que la vista puede tener.
@@ -170,7 +190,16 @@ namespace Ingles
         /// <param name="errorProvider"></param>
         public virtual void Validate(ErrorProvider errorProvider)
         {
-
+            if (Regex.IsMatch(_control.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                errorProvider.SetError(_control, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                errorProvider.SetError(_control, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
         }
     }
 
@@ -178,23 +207,28 @@ namespace Ingles
 
 
 
+
+
+
     public class ValidatorTextBoxRequired: ItemValidarTextBox
     {
-
         public ValidatorTextBoxRequired(TextBox control) : base(control)
         {
 
         }
+
 
         public override void Validate()
         {
             if (_control.Text == String.Empty)
             {
                 _control.BackColor = Color.Red;
+                IsValid = false;
             }
             else
             {
                 _control.BackColor = Color.Green;
+                IsValid = true;
             }
         }
         public override void Validate(ErrorProvider errorProvider)
@@ -215,26 +249,20 @@ namespace Ingles
 
 
 
-
-
-
-
-
-
     public class ValidatorTextBoxEmail : ItemValidarTextBox
     {
-        public ValidatorTextBoxEmail(TextBox control) : base(control) { }
-        public override void Validate()
+        
+        public ValidatorTextBoxEmail(TextBox control) : base(control)
         {
-          /*La logica necesaria para corroborar si el textbox o el contenido del textbox es un email*/  
+            pattern = @"\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
+            Mensaje = "Formato de Email Invalido!!";
         }
     }
     public class ValidatorTextBoxCurp : ItemValidarTextBox
     {
-        public ValidatorTextBoxCurp(TextBox control) : base(control) { }
-        public override void Validate()
-        {
-            
+        public ValidatorTextBoxCurp(TextBox control) : base(control) {
+            pattern = @"^[+-]?\d+(\.\d+)?$*";
+            Mensaje = "Formato de Curp Invalido!!";
         }
     }
     public class ValidatorTextBoxNombre : ItemValidarTextBox

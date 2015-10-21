@@ -22,8 +22,6 @@ namespace Ingles
         public frmLogin()
         {            
             InitializeComponent();
-
-
             _validaciones.ErrorProvider = ErrP_Login;                        
             _validaciones.Add(new ValidatorTextBoxRequired(this.txt_NameUser));
             _validaciones.Add(new ValidatorTextBoxApellidoMaterno(this.txt_NameUser));

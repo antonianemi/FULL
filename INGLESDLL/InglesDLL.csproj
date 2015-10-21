@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlumnoManagerDLL.cs" />
     <Compile Include="AutenticationManagerDLL.cs" />
     <Compile Include="DLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -74,6 +74,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comportamientos\FrmRegistrarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="CustomClass.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -317,9 +320,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Objetos\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\INGLESBLL\InglesBLL.csproj">
       <Project>{D7AECE8D-3721-451F-BE46-9C32989F3B1A}</Project>
