@@ -3,10 +3,8 @@ using System.Windows.Forms;
 using InglesEntity;
 using InglesBLL;
 
-
 namespace Ingles
 {
-
     public partial class FrmRegistrarAlumno
     {
         #region COMPORTAMIENTOS
@@ -58,7 +56,6 @@ namespace Ingles
         }
         #endregion
 
-
         /// <summary>
         /// Registra las validaciones pertinentes para cada control de captura.
         /// </summary>
@@ -71,6 +68,7 @@ namespace Ingles
             _validaciones.Add(new ValidatorTextBoxRequired(this.txt_NoControl));
             _validaciones.Add(new ValidatorTextBoxRequired(this.txt_Nombre));
             _validaciones.Add(new ValidatorTextBoxCurp(this.txt_Curp));
+            _validaciones.Add(new ValidatorTextBoxEstado(this.txt_Apellido_Materno));
         }
 
         /// <summary>

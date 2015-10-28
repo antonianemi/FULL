@@ -41,7 +41,7 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(230, 69);
+            this.btn_Login.Location = new System.Drawing.Point(231, 77);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 29);
             this.btn_Login.TabIndex = 0;
@@ -52,7 +52,7 @@
             // lbl_UserName
             // 
             this.lbl_UserName.AutoSize = true;
-            this.lbl_UserName.Location = new System.Drawing.Point(4, 15);
+            this.lbl_UserName.Location = new System.Drawing.Point(4, 22);
             this.lbl_UserName.Name = "lbl_UserName";
             this.lbl_UserName.Size = new System.Drawing.Size(68, 13);
             this.lbl_UserName.TabIndex = 1;
@@ -61,7 +61,7 @@
             // lbl_Password
             // 
             this.lbl_Password.AutoSize = true;
-            this.lbl_Password.Location = new System.Drawing.Point(4, 45);
+            this.lbl_Password.Location = new System.Drawing.Point(4, 52);
             this.lbl_Password.Name = "lbl_Password";
             this.lbl_Password.Size = new System.Drawing.Size(70, 13);
             this.lbl_Password.TabIndex = 2;
@@ -69,17 +69,19 @@
             // 
             // txt_NameUser
             // 
+            this.txt_NameUser.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_NameUser.Location = new System.Drawing.Point(78, 12);
             this.txt_NameUser.Name = "txt_NameUser";
-            this.txt_NameUser.Size = new System.Drawing.Size(227, 20);
+            this.txt_NameUser.Size = new System.Drawing.Size(227, 29);
             this.txt_NameUser.TabIndex = 3;
             // 
             // txt_Password
             // 
+            this.txt_Password.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Password.Location = new System.Drawing.Point(78, 42);
             this.txt_Password.Name = "txt_Password";
             this.txt_Password.PasswordChar = '*';
-            this.txt_Password.Size = new System.Drawing.Size(228, 20);
+            this.txt_Password.Size = new System.Drawing.Size(228, 29);
             this.txt_Password.TabIndex = 4;
             this.txt_Password.UseSystemPasswordChar = true;
             // 
@@ -100,7 +102,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
-            this.ClientSize = new System.Drawing.Size(335, 107);
+            this.ClientSize = new System.Drawing.Size(335, 126);
             this.Controls.Add(this.lbl_MensajeLogin);
             this.Controls.Add(this.txt_Password);
             this.Controls.Add(this.txt_NameUser);
