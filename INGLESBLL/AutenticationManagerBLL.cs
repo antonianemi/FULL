@@ -10,15 +10,15 @@ namespace InglesBLL
 
     public class AutenticationManagerBLL:BaseBusiness
     {
-        AutenticationManagerDLL dll;        
+        AutenticationManagerDLL _dll;        
         public AutenticationManagerBLL()
         {
-            dll = new AutenticationManagerDLL(_StringConexion, TypeDataBase.Firebird);
+            _dll = new AutenticationManagerDLL(_StringConexion, TypeDataBase.Firebird);
         }
 
         public Session DoLogin(Credentials obj)
         {
-            return dll.DoLogin(obj);
+            return _dll.DoLogin(obj);
         }
     }
 }

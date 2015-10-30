@@ -124,10 +124,10 @@ namespace Ingles
         private void abrirPeriodoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try{
-            FrmRegistraPeriodo childForm = new FrmRegistraPeriodo();
-            childForm.MdiParent = this;
-            //childForm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            childForm.Show();
+                FrmRegistraPeriodo childForm = new FrmRegistraPeriodo(_Session);
+                childForm.MdiParent = this;
+                childForm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+                childForm.Show();
             }
             catch (Exception ex)
             {
@@ -152,9 +152,8 @@ namespace Ingles
         private void modificarPeriodoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try{
-            FrmActualizaPeriodo childForm = new FrmActualizaPeriodo();
-            childForm.MdiParent = this;
-            //childForm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            FrmActualizaPeriodo childForm = new FrmActualizaPeriodo(_Session);
+            childForm.MdiParent = this;            
             childForm.Show();
             }
             catch (Exception ex)
@@ -212,7 +211,7 @@ namespace Ingles
       
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            new FrmAcerdaDe().Show();
         }
 
         private void alumnosInternosToolStripMenuItem_Click(object sender, EventArgs e)
@@ -242,6 +241,7 @@ namespace Ingles
             this.Text = _Session.User.Nombre;
             FillMenu();
         }
+
         /// <summary>
         /// 
         /// </summary>
@@ -254,16 +254,21 @@ namespace Ingles
             }
 
 
-        }        
+        }
 
-        /// <summary>
-        /// Establece la ecena en la pantalla basada en uno de los ecenarios predefinidos.
-        /// </summary>
-        private void SetScenaPantalla()
+        private void registrarAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
+        private void actualizarInformacionAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        private void actualizarInformacionEstatusAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

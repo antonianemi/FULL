@@ -45,13 +45,45 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="UnitTestNivelManagerBLL.cs" />
+    <Compile Include="UnitTestDocenteManagerBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnitTestAlumnoManagerBLL.cs" />
+    <Compile Include="UnitTestAsistenciaManagerBLL.cs" />
+    <Compile Include="UnitTestCalificacionManagerBLL.cs" />
+    <Compile Include="UnitTestCarreraManagerBLL.cs" />
+    <Compile Include="UnitTestCredentialsManagerBLL.cs" />
+    <Compile Include="UnitTestCursoManagerBLL.cs" />
+    <Compile Include="UnitTestHorarioManagerBLL.cs" />
+    <Compile Include="UnitTestPeriodoManagerBLL.cs" />
+    <Compile Include="UnitTestSessionManagerBLL.cs" />
+    <Compile Include="UnitTestUsuarioManagerBLL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\INGLESBLL\InglesBLL.csproj">
+      <Project>{d7aece8d-3721-451f-be46-9c32989f3b1a}</Project>
+      <Name>InglesBLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\INGLESDLL\InglesDLL.csproj">
+      <Project>{d7dcf322-1a67-4baa-b6e8-1b7cc7aae5ef}</Project>
+      <Name>InglesDLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\INGLESENTITY\InglesEntity.csproj">
+      <Project>{19834442-a009-444d-99a1-16150a017fee}</Project>
+      <Name>InglesEntity</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="UnitTest.orderedtest">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

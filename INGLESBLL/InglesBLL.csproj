@@ -56,10 +56,20 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlumnoManagerBLL.cs" />
+    <Compile Include="AsistenciaManagerBLL.cs" />
     <Compile Include="AutenticationManagerBLL.cs" />
     <Compile Include="BLL.cs" />
     <Compile Include="BaseBusiness.cs" />
+    <Compile Include="CalificacionManagerBLL.cs" />
+    <Compile Include="CarreraManagerBLL.cs" />
+    <Compile Include="CredentialsManagerBLL.cs" />
+    <Compile Include="CursoManagerBLL.cs" />
+    <Compile Include="HorarioManagerBLL.cs" />
+    <Compile Include="NivelManagerBLL.cs" />
+    <Compile Include="PeriodoManagerBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionManagerBLL.cs" />
+    <Compile Include="UsuarioManagerBLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\INGLESDLL\InglesDLL.csproj">

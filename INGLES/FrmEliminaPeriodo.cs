@@ -12,7 +12,7 @@ using InglesEntity;
 
 namespace Ingles
 {
-    public partial class FrmEliminaPeriodo : Form, IForm
+    public partial class FrmEliminaPeriodo : Form
     {
         BLL objbll = null;
         public FrmEliminaPeriodo()
@@ -72,9 +72,6 @@ namespace Ingles
         {
             throw new NotImplementedException();
         }
-        void IForm.validate()
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 }

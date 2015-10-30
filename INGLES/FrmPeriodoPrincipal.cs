@@ -25,7 +25,7 @@ namespace Ingles
             {
                 //Lanzar formulario para actualizar datos de un alumno.
                 this.Hide();
-                new FrmActualizaPeriodo().Show();
+                //new FrmActualizaPeriodo().Show();
             }
             if (rdb_Periodo_Baja.Checked)
             {
@@ -37,7 +37,7 @@ namespace Ingles
             {
                 //Lanzar Formulario para registrar alumno.
                 this.Hide();
-                new FrmRegistraPeriodo().Show();
+               // new FrmRegistraPeriodo().Show();
             }
         }
 

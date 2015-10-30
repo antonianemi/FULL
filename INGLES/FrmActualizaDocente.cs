@@ -14,37 +14,17 @@ namespace Ingles
         public FrmActualizaDocente()
         {
             InitializeComponent();
-            //Cargar objetos de docentes para actualizarlos.
-            //No si el usuario realiza la busqueda que sea sobre los objetos
-            //que ya esten en memorya.
-            
+        }
+   
 
-            // De otra manera cargar los contenedores de objetos y
-            // Realizar las busqueda y llenar el objeto con los resultados
-            // 
-            // 1.- buscar docente este llenara el objeto 
-            // y lo traera al formulario con la unica opcion de poder actualizar
-            // al momento de ejecutar el metodo de actualizar, enviar los datos
-            // a la base de datos.
-
-
+        private void ACTUALIZAR(object sender, EventArgs e)
+        {
 
         }
-        /// <summary>
-        /// Valida los campos registrados.
-        /// </summary>
-        private void validate()
+
+        private void CANCELAR(object sender, EventArgs e)
         {
-            //validar el objeto antes de enviarlo a guardar a la base de 
-            //datos.
-        }
-        /// <summary>
-        /// Limpia los controles del formulario.
-        /// </summary>
-        private void limpiaControles()
-        {
-            //Limpiar los controles del formulario.
-            //
+
         }
     }
 }

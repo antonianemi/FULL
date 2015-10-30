@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
-
+using InglesEntity;
 
 
 
@@ -14,14 +14,45 @@ namespace Ingles
     public class FormBase : Form
     {
         protected Validator _validaciones;
+        private Session _session;
         /// <summary>
         /// Indica si se pueden enviar a guardar los datos en la base de datos.
         /// </summary>
+        public FormBase(Session session)
+        {
+            _validaciones = new Validator();
+            this._session = session;
+        }
         public FormBase()
         {
             _validaciones = new Validator();
         }
-        
+        public Usuario User
+        {
+            get { return _session.User; }
+        }      
+        /// <summary>
+        /// 
+        /// </summary>
+        protected virtual void ShowError(Exception ex)
+        {
+            MessageBox.Show("AQUI HUBO UN PEDO WEY NO MAMES!!!!","Mensaje de Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+        /// <summary>
+        /// Manifiesta un mensaje de Notificacion 
+        /// </summary>
+        /// <param name="Mensaje"></param>
+        protected virtual void ShowNotification(string Mensaje)
+        {
+            MessageBox.Show(Mensaje, "",MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+        protected virtual bool ShowQuestion(string Mensaje)
+        {
+           if(DialogResult.OK == MessageBox.Show(Mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Information))
+                return true;            
+            else            
+                return false;
+        }
     }
 
 
@@ -138,9 +169,7 @@ namespace Ingles
         }
         
     }
-
-
-
+   
 
 
     #region VALIDACIONES

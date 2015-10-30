@@ -27,12 +27,8 @@ namespace Ingles
         private void EscenaReadyForSave()
         {
             _validaciones.ExecuteValidation();
-            if (_validaciones.IsSave)
-            {
+            if (_validaciones.IsSave)            
                 this.btn_Registrar.Enabled = true;
-            }
-
-
         }
         /// <summary>
         /// se limpian los controles de captura y se deshabilita 
@@ -40,12 +36,12 @@ namespace Ingles
         private void EscenaClearControles()
         {
             EscenaStart();
-            this.txt_Apellido_Materno.Text = "";
-            this.txt_Apellido_Paterno.Text = "";
-            this.txt_Curp.Text = "";
-            this.txt_NoControl.Text = "";
-            this.txt_Nombre.Text = "";
-            this.txt_RFC.Text = "";
+            this.txt_Apellido_Materno.Text = String.Empty;
+            this.txt_Apellido_Paterno.Text = String.Empty;
+            this.txt_Curp.Text = String.Empty;
+            this.txt_NoControl.Text = String.Empty;
+            this.txt_Nombre.Text = String.Empty;
+            this.txt_RFC.Text = String.Empty;
         }
         /// <summary>
         /// Excenas
@@ -56,6 +52,11 @@ namespace Ingles
         }
         #endregion
 
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void LoadCatalogos() { }
         /// <summary>
         /// Registra las validaciones pertinentes para cada control de captura.
         /// </summary>
@@ -70,14 +71,13 @@ namespace Ingles
             _validaciones.Add(new ValidatorTextBoxCurp(this.txt_Curp));
             _validaciones.Add(new ValidatorTextBoxEstado(this.txt_Apellido_Materno));
         }
-
         /// <summary>
         /// Captura la informacion del los controles de usuario y 
         /// </summary>
         /// <returns></returns>
-        private InglesEntity.Alumno DoCaptureInformation()
+        private Alumno DoCaptureInformation()
         {
-            return new InglesEntity.Alumno()
+            return new Alumno()
             {
                 NOMBRE = txt_Nombre.Text,
                 APELLIDO_MATERNO = txt_Apellido_Materno.Text,
@@ -86,18 +86,22 @@ namespace Ingles
                 NO_CONTROL = txt_NoControl.Text
             };
         }
-
-
         /// <summary>
         /// Envia la informacion capturada a la logica de negocio.
         /// </summary>
         private void DoSendInformation()
         {
-            _validaciones.ExecuteValidation();
+            try {
+                _validaciones.ExecuteValidation();
 
-            if (_validaciones.IsValid)
+                if (_validaciones.IsValid)
+                {
+                    bll.DoCreateAlumno(DoCaptureInformation());
+                }
+            }
+            catch(Exception)
             {
-                bll.DoCreateAlumno(DoCaptureInformation());
+
             }
         }
     }

@@ -36,19 +36,7 @@ namespace Ingles
             //Regresar al menu principal.
         }
 
-        /// <summary>
-        /// Realiza las validaciones de los datos.
-        /// </summary>
-        private void Validate(){
-
-        }
-        /// <summary>
-        /// Limpia los controles del formulario.
-        /// </summary>
-        private void LimpiaControles()
-        {
-
-        }
+        
 
     }
 }

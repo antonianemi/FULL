@@ -45,7 +45,7 @@ namespace InglesDLL
         /// <param name="obj">representa los datos del periodo a insertar en el sistema.</param>
         public void insertPeriodo(Periodo obj)
         {
-            this.ExecuteNonQuery(String.Format("EXECUTE PROCEDURE SP_REGISTRA_PERIODO({0},'{1}','{2}',{3})", getPKPeriodo(), obj.PERIODO, obj.DESCRIPCION, obj.STATUS));
+            this.ExecuteNonQuery(String.Format("EXECUTE PROCEDURE SP_REGISTRA_PERIODO({0},'{1}','{2}',{3})", 1, obj.PERIODO, obj.DESCRIPCION, obj.STATUS));
             if (this.ExistError)
                 throw new Exception(this.MessageError);
         }
@@ -475,14 +475,7 @@ namespace InglesDLL
             if (this.ExistError)
                 throw new Exception(this.MessageError);
             return num;
-        }
-        private int getPKPeriodo()
-        {
-            int num = Convert.ToInt32(this.ExecuteScalar(String.Format("SELECT ID_PERIODO FROM PERIODOS ORDER BY ID_PERIODO DESC"))) + 1;
-            if (this.ExistError)
-                throw new Exception(this.MessageError);
-            return num;
-        }
+        }        
         private int getPKCarrera()
         {
             int num = Convert.ToInt32(this.ExecuteScalar(String.Format("SELECT ID_CARRERA FROM CAT_CARRERAS ORDER BY ID_CARRERA DESC"))) + 1;
@@ -540,6 +533,5 @@ namespace InglesDLL
             return num;
         }
         #endregion
-
     }
 }

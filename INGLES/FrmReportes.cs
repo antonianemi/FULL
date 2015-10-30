@@ -110,7 +110,6 @@ namespace Ingles
 
                 Microsoft.Office.Interop.Excel.Application aplicacion;
                 Microsoft.Office.Interop.Excel.Workbook libros_trabajo;
-                Microsoft.Office.Interop.Excel.Worksheet hoja_trabajo;
                 aplicacion = new Microsoft.Office.Interop.Excel.Application();
                 libros_trabajo = aplicacion.Workbooks.Add();
                 //hoja_trabajo =  (Microsoft.Office.Interop.Excel.Worksheet)libros_trabajo.Worksheets.get_Item(1);

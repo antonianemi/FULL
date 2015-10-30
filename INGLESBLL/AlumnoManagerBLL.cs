@@ -8,12 +8,11 @@ namespace InglesBLL
 
     public class AlumnoManagerBLL : BaseBusiness
     {
-        AlumnoManagerDLL dll;
+        AlumnoManagerDLL _dll;
         public AlumnoManagerBLL()
         {
-            dll = new AlumnoManagerDLL(_StringConexion, TypeDataBase.Firebird);
+            _dll = new AlumnoManagerDLL(_StringConexion, TypeDataBase.Firebird);
         }
-
 
         public void DoCreateAlumno(Alumno alumno)
         {

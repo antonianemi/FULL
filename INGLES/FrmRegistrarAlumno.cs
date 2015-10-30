@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 using InglesEntity;
 using InglesBLL;
-
+using System.Speech.Synthesis;
 
 namespace Ingles
 {
@@ -17,8 +17,8 @@ namespace Ingles
             bll = new AlumnoManagerBLL();
             LoadValidation();
             EscenaStart();
-         }
-        
+        }
+
         private void btn_Registrar_Click(object sender, EventArgs e)
         {
             DoSendInformation();

@@ -28,19 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Location = new System.Drawing.Point(24, 13);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.Size = new System.Drawing.Size(797, 450);
+            this.reportViewer1.TabIndex = 0;
             // 
             // FrmBoletas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(874, 325);
+            this.ClientSize = new System.Drawing.Size(1116, 592);
+            this.Controls.Add(this.reportViewer1);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "FrmBoletas";
             this.Text = "FrmBoletas";
+            this.Load += new System.EventHandler(this.FrmBoletas_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
     }
 }

@@ -15,5 +15,11 @@ namespace Ingles
         {
             InitializeComponent();
         }
+
+        private void FrmBoletas_Load(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.RefreshReport();
+        }
     }
 }

@@ -44,9 +44,19 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AlumnoManagerDLL.cs" />
+    <Compile Include="AsistenciaManagerDLL.cs" />
     <Compile Include="AutenticationManagerDLL.cs" />
+    <Compile Include="CalificacionManagerDLL.cs" />
+    <Compile Include="CarreraManagerDLL.cs" />
+    <Compile Include="CredentialsManagerDLL.cs" />
+    <Compile Include="CursoManagerDLL.cs" />
     <Compile Include="DLL.cs" />
+    <Compile Include="HorarioManagerDLL.cs" />
+    <Compile Include="NivelManagerDLL.cs" />
+    <Compile Include="PeriodoManagerDLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SessionManagerDLL.cs" />
+    <Compile Include="UsuarioManagerDLL.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\INGLESENTITY\InglesEntity.csproj">

@@ -15,5 +15,17 @@ namespace Ingles
         {
             InitializeComponent();
         }
+
+        private void BUSCARALUMNO(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                MessageBox.Show("Buscando Coincidencia de Alumno....");
+            }
+        }
+        private void ACTUALIZAR(object sender, EventArgs e)
+        {
+            MessageBox.Show("Se Envia a Actualizar.!!!");
+        }
     }
 }
