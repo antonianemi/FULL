@@ -2,13 +2,11 @@
 using InglesEntity;
 namespace InglesDLL
 {
-    public class CursoManagerDLL : BaseDLL
+    public class CursoManagerDLL : BaseLayerDLL
     {
         public CursoManagerDLL(string pstrConn, TypeDataBase pTypeDB) : base(pstrConn, pTypeDB)
         {
 
         }
-
-
     }
 }

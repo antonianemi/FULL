@@ -6,6 +6,24 @@ namespace InglesBLL
 {
     public class BaseBusiness
     {
+        private int _CodeError;
+        private bool _IsError;
+        private string _MessageError;
+        public bool ExistError
+        {
+            get { return _IsError; }
+            set { _IsError = value; }
+        }
+        public string MessageError
+        {
+            get { return _MessageError; }
+            set { _MessageError = value; }
+        }
+        public int CodeError
+        {
+            get { return _CodeError; }
+            set { _CodeError = value; }
+        }
         private static string stringConexion = string.Empty;
         /// <summary>
         /// Representa 

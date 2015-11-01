@@ -5,13 +5,22 @@ using System.Text;
 
 namespace InglesEntity
 {
-    /// <summary>
-    /// Representa el status de un periodo.
-    /// </summary>
+    public enum STATUSSESSION
+    {
+        /// <summary>
+        /// Representa el status abierto de una session.
+        /// </summary>
+        Open=1,
+        /// <summary>
+        /// Representa el status cerrado de una session.
+        /// </summary>
+        Close = 2
+
+    }
     public enum estatusPeriodo
     {
         Activo=1,
         Inactivo=2,
-        Baja=0
+            Baja=3
     }
 }

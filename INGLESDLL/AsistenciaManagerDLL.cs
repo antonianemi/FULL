@@ -3,9 +3,8 @@ using InglesEntity;
 
 namespace InglesDLL
 {
-    public class AsistenciaManagerDLL : BaseDLL
+    public class AsistenciaManagerDLL : BaseLayerDLL
     {
-        
         public AsistenciaManagerDLL(string pstrConn, TypeDataBase pTypeDB) : base(pstrConn, pTypeDB)
         {
 

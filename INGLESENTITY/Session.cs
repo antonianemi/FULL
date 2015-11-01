@@ -9,5 +9,8 @@ namespace InglesEntity
     {
         public int IdSession { get; set; }
         public Usuario User { get; set; }
+        public DateTime FechaInicio { get; set; }
+        public DateTime FechaCierre { get; set; }
+        public STATUSSESSION Status { get; set; }
     }
 }

@@ -35,7 +35,7 @@ namespace Ingles
         /// </summary>
         private void Inicialize()
         {
-            List<Periodo> periodos = objbll.getPeriodos();
+            List<Periodo> periodos = new List<Periodo>();
             dtg_periodos.DataSource = periodos;
         }
         /// <summary>

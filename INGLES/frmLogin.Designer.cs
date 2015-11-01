@@ -1,6 +1,6 @@
 ﻿namespace Ingles
 {
-    partial class frmLogin
+    partial class FrmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -41,13 +41,13 @@
             // 
             // btn_Login
             // 
-            this.btn_Login.Location = new System.Drawing.Point(231, 77);
+            this.btn_Login.Location = new System.Drawing.Point(231, 96);
             this.btn_Login.Name = "btn_Login";
             this.btn_Login.Size = new System.Drawing.Size(75, 29);
             this.btn_Login.TabIndex = 0;
             this.btn_Login.Text = "LOGIN";
             this.btn_Login.UseVisualStyleBackColor = true;
-            this.btn_Login.Click += new System.EventHandler(this.btn_Login_Click);
+            this.btn_Login.Click += new System.EventHandler(this.LOGIN);
             // 
             // lbl_UserName
             // 
@@ -88,7 +88,7 @@
             // lbl_MensajeLogin
             // 
             this.lbl_MensajeLogin.AutoSize = true;
-            this.lbl_MensajeLogin.Location = new System.Drawing.Point(45, 69);
+            this.lbl_MensajeLogin.Location = new System.Drawing.Point(87, 74);
             this.lbl_MensajeLogin.Name = "lbl_MensajeLogin";
             this.lbl_MensajeLogin.Size = new System.Drawing.Size(0, 13);
             this.lbl_MensajeLogin.TabIndex = 5;
@@ -97,7 +97,7 @@
             // 
             this.ErrP_Login.ContainerControl = this;
             // 
-            // frmLogin
+            // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -110,7 +110,7 @@
             this.Controls.Add(this.lbl_UserName);
             this.Controls.Add(this.btn_Login);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "frmLogin";
+            this.Name = "FrmLogin";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             ((System.ComponentModel.ISupportInitialize)(this.ErrP_Login)).EndInit();

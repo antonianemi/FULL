@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="UnitTestAutenticationManagerBLL.cs" />
     <Compile Include="UnitTestNivelManagerBLL.cs" />
     <Compile Include="UnitTestDocenteManagerBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

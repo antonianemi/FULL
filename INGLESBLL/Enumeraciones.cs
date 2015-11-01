@@ -1,17 +1,11 @@
 ﻿using System;
-using InglesDLL;
-using BaseAcces;
-using InglesEntity;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
 namespace InglesBLL
 {
-    
-    public class BLL :BaseBusiness
+    class Enumeraciones
     {
-       
     }
-
-
 }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace InglesDLL
 {
-    public class PeriodoManagerDLL : BaseDLL
+    public class PeriodoManagerDLL : BaseLayerDLL
     {
         public PeriodoManagerDLL(string pstrConn, TypeDataBase pTypeDB) : base(pstrConn, pTypeDB) { }
 

@@ -46,7 +46,7 @@ namespace Ingles
 
         private void Inicialized()
         {            
-            _periodos = bll.getPeriodos();                        
+           // _periodos = bll.getPeriodos();                        
             cargaPeriodos();            
             lst_NIVELES.DisplayMember = "NIVEL";
             lst_NIVELES_PERIODOS.DisplayMember = "NIVEL";
@@ -91,7 +91,7 @@ namespace Ingles
         private void cbm_Periodo_SelectedIndexChanged(object sender, EventArgs e)
         {
             _periodoselecionado = (Periodo)((ComboBox)sender).SelectedItem;
-            _nivelesDisponibles = bll.nivelesDisponibles(_periodoselecionado);
+           //_nivelesDisponibles = bll.nivelesDisponibles(_periodoselecionado);
             limpiaControles(1);
             cargaCatNiveles();
             cargaNivelesPeriodos();
@@ -137,7 +137,7 @@ namespace Ingles
              _periodoselecionado.NIVELES.Add((Nivel)item);
             }           
 
-            bll.actualizaNivelesPeriodo(_periodoselecionado);
+           //bll.actualizaNivelesPeriodo(_periodoselecionado);
 
         }
         private void btn_Cancelar_Click_1(object sender, EventArgs e)

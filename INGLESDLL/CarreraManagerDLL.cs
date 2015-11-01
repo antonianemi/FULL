@@ -3,7 +3,7 @@ using InglesEntity;
 
 namespace InglesDLL
 {
-    public class CarreraManagerDLL : BaseDLL
+    public class CarreraManagerDLL : BaseLayerDLL
     {
         public CarreraManagerDLL(string pstrConn, TypeDataBase pTypeDB) : base(pstrConn, pTypeDB)
         {

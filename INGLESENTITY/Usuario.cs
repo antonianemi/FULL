@@ -15,5 +15,6 @@ namespace InglesEntity
         public string Edad { set; get; }
         public string PathFoto { set; get; }
         public string FullName {  get { return Nombre + " " + ApellidoPaterno + " " + ApellidoPaterno; } }
+        public List<OpcionMenu> OptionsMenus { set; get; }
     }
 }

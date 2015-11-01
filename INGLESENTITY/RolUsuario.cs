@@ -13,8 +13,6 @@ namespace InglesEntity
         public int IdRol { set; get; }
 
         public int Descripcion { get; set; }
-
-
-
+        
     }
 }

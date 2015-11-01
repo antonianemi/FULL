@@ -32,7 +32,7 @@ namespace Ingles
             }
             else
             {
-                /*se intento acceder sin una session activa*/
+                this.Dispose();
             }
         }
 
@@ -232,7 +232,6 @@ namespace Ingles
             return null;
         }
 
-
         /// <summary>
         /// Se encarga de printar la informacion principal en el formulario.
         /// </summary>
@@ -247,11 +246,12 @@ namespace Ingles
         /// </summary>
         private void FillMenu()
         {
-            List<object> items = new List<object>();
-            foreach (var item in this.menuStrip.Items)
-            {                
-                items.Add(item);
-            }
+
+            //List<object> items = new List<object>();
+            //foreach (var item in this.menuStrip.Items)
+            //{                
+            //    items.Add(item);
+            //}
 
 
         }

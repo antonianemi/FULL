@@ -81,6 +81,9 @@
     <Compile Include="Comportamientos\FrmActualizaPeriodo.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Comportamientos\FrmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Comportamientos\FrmRegistraPeriodo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -165,11 +168,11 @@
     <Compile Include="FrmEliminaPeriodo.Designer.cs">
       <DependentUpon>FrmEliminaPeriodo.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmLogin.cs">
+    <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmLogin.Designer.cs">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <Compile Include="FrmLogin.Designer.cs">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmNivelPrincipal.cs">
       <SubType>Form</SubType>
@@ -284,8 +287,8 @@
     <EmbeddedResource Include="FrmEliminaPeriodo.resx">
       <DependentUpon>FrmEliminaPeriodo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmLogin.resx">
-      <DependentUpon>frmLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FrmLogin.resx">
+      <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmNivelPrincipal.resx">
       <DependentUpon>FrmNivelPrincipal.cs</DependentUpon>

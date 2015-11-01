@@ -34,13 +34,13 @@ namespace Ingles
             objCarrera.DESCRIPCION = "carrera pesada para estudiar sistemas";
             
 
-           List<Carrera> carreras = objBll.getCarreras();
-           List<Calificacion> calificaciones = objBll.getCalificaciones(); 
-           List<Curso> cursos = objBll.getCursos();
-           List<Docente> docentes = objBll.getDocentes();
-           List<Horario> horarios = objBll.getHorarios();
-           List<Nivel> niveles = objBll.getCatNiveles();
-           List<Periodo> periodos = objBll.getPeriodos();
+           //List<Carrera> carreras = objBll.getCarreras();
+           //List<Calificacion> calificaciones = objBll.getCalificaciones(); 
+           //List<Curso> cursos = objBll.getCursos();
+           //List<Docente> docentes = objBll.getDocentes();
+           //List<Horario> horarios = objBll.getHorarios();
+           //List<Nivel> niveles = objBll.getCatNiveles();
+           //List<Periodo> periodos = objBll.getPeriodos();
            MessageBox.Show("");
         }
     }

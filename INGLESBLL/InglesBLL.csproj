@@ -64,6 +64,7 @@
     <Compile Include="CarreraManagerBLL.cs" />
     <Compile Include="CredentialsManagerBLL.cs" />
     <Compile Include="CursoManagerBLL.cs" />
+    <Compile Include="Enumeraciones.cs" />
     <Compile Include="HorarioManagerBLL.cs" />
     <Compile Include="NivelManagerBLL.cs" />
     <Compile Include="PeriodoManagerBLL.cs" />
