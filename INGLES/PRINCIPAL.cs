@@ -121,7 +121,7 @@ namespace Ingles
             }
         }
 
-        private void abrirPeriodoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OP_ABRIRPERIODO(object sender, EventArgs e)
         {
             try{
                 FrmRegistraPeriodo childForm = new FrmRegistraPeriodo(_Session);
@@ -135,7 +135,7 @@ namespace Ingles
             }
         }
 
-        private void eliminarPeriodoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void OP_UPDATEPERIODO(object sender, EventArgs e)
         {
         try{
             FrmEliminaPeriodo childForm = new FrmEliminaPeriodo();
@@ -256,19 +256,37 @@ namespace Ingles
 
         }
 
+
+
+
         private void registrarAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
+
+
 
         private void actualizarInformacionAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
+
+
         private void actualizarInformacionEstatusAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
+
+
+
+
+        private void consultaDeCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
     }
 }

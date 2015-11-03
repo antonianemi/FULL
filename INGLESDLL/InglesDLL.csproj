@@ -46,11 +46,11 @@
     <Compile Include="AlumnoManagerDLL.cs" />
     <Compile Include="AsistenciaManagerDLL.cs" />
     <Compile Include="AutenticationManagerDLL.cs" />
+    <Compile Include="BaseLayerDLL.cs" />
     <Compile Include="CalificacionManagerDLL.cs" />
     <Compile Include="CarreraManagerDLL.cs" />
     <Compile Include="CredentialsManagerDLL.cs" />
     <Compile Include="CursoManagerDLL.cs" />
-    <Compile Include="BaseLayerDLL.cs" />
     <Compile Include="Enumeraciones.cs" />
     <Compile Include="HorarioManagerDLL.cs" />
     <Compile Include="NivelManagerDLL.cs" />

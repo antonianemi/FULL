@@ -53,8 +53,8 @@
   </Choose>
   <ItemGroup>
     <Compile Include="UnitTestAutenticationManagerBLL.cs" />
-    <Compile Include="UnitTestNivelManagerBLL.cs" />
     <Compile Include="UnitTestDocenteManagerBLL.cs" />
+    <Compile Include="UnitTestNivelManagerBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UnitTestAlumnoManagerBLL.cs" />
     <Compile Include="UnitTestAsistenciaManagerBLL.cs" />
