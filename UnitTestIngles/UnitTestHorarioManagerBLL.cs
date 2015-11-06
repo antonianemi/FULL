@@ -13,5 +13,11 @@ namespace UnitTestIngles
             HorarioManagerBLL obj = new HorarioManagerBLL();
             Assert.IsNotNull(obj);
         }
+
+
+
+
+
+
     }
 }

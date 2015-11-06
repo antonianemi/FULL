@@ -78,6 +78,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Comportamientos\FrmAbrirGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Comportamientos\FrmActualizaPeriodo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +95,12 @@
     </Compile>
     <Compile Include="CustomClass.cs">
       <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FrmAbrirGrupo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAbrirGrupo.Designer.cs">
+      <DependentUpon>FrmAbrirGrupo.cs</DependentUpon>
     </Compile>
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
@@ -138,6 +147,12 @@
     <Compile Include="FrmBoletas.Designer.cs">
       <DependentUpon>FrmBoletas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCalificaAlumnos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCalificaAlumnos.Designer.cs">
+      <DependentUpon>FrmCalificaAlumnos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmDocentePrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +182,18 @@
     </Compile>
     <Compile Include="FrmEliminaPeriodo.Designer.cs">
       <DependentUpon>FrmEliminaPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImportarAlunos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImportarAlunos.Designer.cs">
+      <DependentUpon>FrmImportarAlunos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInscripcion.Designer.cs">
+      <DependentUpon>FrmInscripcion.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmLogin.cs">
       <SubType>Form</SubType>
@@ -216,12 +243,6 @@
     <Compile Include="FrmRegistrarAlumno.Designer.cs">
       <DependentUpon>FrmRegistrarAlumno.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmAlumnoPrincipal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAlumnoPrincipal.Designer.cs">
-      <DependentUpon>FrmAlumnoPrincipal.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmReportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -233,6 +254,12 @@
     </Compile>
     <Compile Include="FrmRespaldos.Designer.cs">
       <DependentUpon>FrmRespaldos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSelectedCurso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSelectedCurso.Designer.cs">
+      <DependentUpon>FrmSelectedCurso.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
@@ -248,6 +275,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmAbrirGrupo.resx">
+      <DependentUpon>FrmAbrirGrupo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmAccesos.resx">
       <DependentUpon>FrmAccesos.cs</DependentUpon>
     </EmbeddedResource>
@@ -266,11 +296,11 @@
     <EmbeddedResource Include="FrmActualizaPeriodo.resx">
       <DependentUpon>FrmActualizaPeriodo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAlumnoPrincipal.resx">
-      <DependentUpon>FrmAlumnoPrincipal.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmBoletas.resx">
       <DependentUpon>FrmBoletas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCalificaAlumnos.resx">
+      <DependentUpon>FrmCalificaAlumnos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmDocentePrincipal.resx">
       <DependentUpon>FrmDocentePrincipal.cs</DependentUpon>
@@ -286,6 +316,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmEliminaPeriodo.resx">
       <DependentUpon>FrmEliminaPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImportarAlunos.resx">
+      <DependentUpon>FrmImportarAlunos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInscripcion.resx">
+      <DependentUpon>FrmInscripcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
@@ -313,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReportes.resx">
       <DependentUpon>FrmReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSelectedCurso.resx">
+      <DependentUpon>FrmSelectedCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRINCIPAL.resx">
       <DependentUpon>PRINCIPAL.cs</DependentUpon>

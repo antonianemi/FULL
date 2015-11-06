@@ -46,6 +46,11 @@ namespace Ingles
         {
             MessageBox.Show(Mensaje, "",MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="Mensaje"></param>
+        /// <returns></returns>
         protected virtual bool ShowQuestion(string Mensaje)
         {
            if(DialogResult.OK == MessageBox.Show(Mensaje, "", MessageBoxButtons.OK, MessageBoxIcon.Information))
@@ -252,32 +257,32 @@ namespace Ingles
         }
         #endregion
     }
+
+
     public class ValidatorTextBoxRequired: ItemValidar
     {
-        private bool IsValidRequired { set; get; }
         public ValidatorTextBoxRequired(TextBox control) : base(control)
         {
 
         }
-
         public override void Validate()
         {
             if (_txtcontrol.Text == String.Empty)
-            {
-                
+            {   
                 _txtcontrol.BackColor = Color.Orange;
-                IsValidRequired = false;
+                IsValid = false;
             }
             else
             {
                 _txtcontrol.BackColor = Color.Green;
-                IsValidRequired = true;
+                IsValid = true;
             }
         }
         public override void Validate(ErrorProvider errorProvider)
         {
             if (_txtcontrol.Text == String.Empty)
             {
+                _txtcontrol.BackColor = Color.Orange;
                 errorProvider.SetError(_txtcontrol, "Este Campo es Requerido!!");
                 IsValid = false;
             }
@@ -287,7 +292,6 @@ namespace Ingles
                 IsValid = true;
             }
         }
-
     }
     public class ValidatorTextBoxEmail : ItemValidar
     {
@@ -297,15 +301,18 @@ namespace Ingles
             base.pattern = @"\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";
             base.Mensaje = "Formato de Email Invalido!!";
         }
+
         public override void Validate(ErrorProvider errorProvider)
         {
             if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
             {
+                _txtcontrol.BackColor = Color.Orange;
                 errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
                 IsValid = true;
             }
             else
             {
+                _txtcontrol.BackColor = Color.Green;
                 errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
                 IsValid = false;
             }
@@ -331,23 +338,100 @@ namespace Ingles
             pattern = @"^[+-]?\d+(\.\d+)?$*";
             Mensaje = "Formato de Curp Invalido!!";
         }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
+
+        public override void Validate()
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
+        }
     }
     public class ValidatorTextBoxNombre : ItemValidar
     {
         public ValidatorTextBoxNombre(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
+
         public override void Validate()
         {
-            pattern = @"";
-            Mensaje = "Formato de Nombre Invalido!!";
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
     }
     public class ValidatorTextBoxApellidoPaterno : ItemValidar
     {
         public ValidatorTextBoxApellidoPaterno(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
+
         public override void Validate()
         {
-            pattern = @"";
-            Mensaje = "Formato de ApellidoPaterno Invalido!!";
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
     }
     public class ValidatorTextBoxApellidoMaterno : ItemValidar
@@ -363,15 +447,18 @@ namespace Ingles
         {
             if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
             {
-                errorProvider.SetError(_txtcontrol, "El Formato de Apellido Materno No es Valido!!");
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
                 IsValid = true;
             }
             else
             {
-                errorProvider.SetError(_txtcontrol, "El Formato de Apellido Materno No es Valido!!");
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
                 IsValid = false;
             }
         }
+
         public override void Validate()
         {
             if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
@@ -389,89 +476,318 @@ namespace Ingles
     public class ValidatorTextBoxEdad : ItemValidar
     {
         public ValidatorTextBoxEdad(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
+
         public override void Validate()
         {
-            pattern = @"";
-            Mensaje = "Formato de Edad Invalido!!";
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
     }
     public class ValidatorTextBoxFechaNacimiento : ItemValidar
     {
         public ValidatorTextBoxFechaNacimiento(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
         public override void Validate()
         {
-            pattern = @"";
-            Mensaje = "Formato de FechaNacimiento Invalido!!";
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
     }
     public class ValidatorTextBoxSexo : ItemValidar
     {
         public ValidatorTextBoxSexo(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
         public override void Validate()
         {
-            pattern = @"";
-            Mensaje = "Formato de Sexo Invalido!!";
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
     }
     public class ValidatorTextBoxCalle : ItemValidar
     {
         public ValidatorTextBoxCalle(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
+
         public override void Validate()
         {
-            pattern = @"";
-            Mensaje = "Formato de Calle Invalido!!";
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
 
     }
     public class ValidatorTextBoxEstado : ItemValidar
     {
         public ValidatorTextBoxEstado(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
+
         public override void Validate()
         {
-            pattern = @"";
-            Mensaje = "Formato de Estado Invalido!!";
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
     }
     public class ValidatorTextBoxMunicipio : ItemValidar
     {
         public ValidatorTextBoxMunicipio(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
+
         public override void Validate()
         {
-            pattern = @"";
-            Mensaje = "Formato de Municipio Invalido!!";
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
     }
     public class ValidatorTextBoxNumeroInterior : ItemValidar
     {
         public ValidatorTextBoxNumeroInterior(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
+
         public override void Validate()
         {
-            pattern = @"";
-            Mensaje = "Formato de NumeroInterior Invalido!!";
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
     }
     public class ValidatorTextBoxNumeroExterior : ItemValidar
     {
         public ValidatorTextBoxNumeroExterior(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
+
         public override void Validate()
         {
-            pattern = @"";
-            Mensaje = "Formato de NumeroExterior Invalido!!";
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
     }
     public class ValidatorTextBoxProfesion : ItemValidar
     {
         public ValidatorTextBoxProfesion(TextBox control) : base(control) { }
+        public override void Validate(ErrorProvider errorProvider)
+        {
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Orange;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Green;
+                errorProvider.SetError(_txtcontrol, "El Formato de Email No es Valido!!");
+                IsValid = false;
+            }
+        }
+
         public override void Validate()
         {
-
-            pattern = @"";
-            Mensaje = "Formato de Profesion Invalido!!";
-
+            if (Regex.IsMatch(_txtcontrol.Text, pattern, RegexOptions.IgnoreCase))
+            {
+                _txtcontrol.BackColor = Color.Green;
+                IsValid = true;
+            }
+            else
+            {
+                _txtcontrol.BackColor = Color.Red;
+                IsValid = false;
+            }
         }
     }
-
     #endregion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

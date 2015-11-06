@@ -57,12 +57,12 @@
             this.dtg_PERIODOS.AllowUserToAddRows = false;
             this.dtg_PERIODOS.AllowUserToDeleteRows = false;
             this.dtg_PERIODOS.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtg_PERIODOS.Location = new System.Drawing.Point(11, 26);
+            this.dtg_PERIODOS.Location = new System.Drawing.Point(11, 12);
             this.dtg_PERIODOS.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtg_PERIODOS.Name = "dtg_PERIODOS";
             this.dtg_PERIODOS.ReadOnly = true;
             this.dtg_PERIODOS.RowTemplate.Height = 24;
-            this.dtg_PERIODOS.Size = new System.Drawing.Size(629, 198);
+            this.dtg_PERIODOS.Size = new System.Drawing.Size(629, 212);
             this.dtg_PERIODOS.TabIndex = 0;
             this.dtg_PERIODOS.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.SELECCIONAPERIODO);
             // 
@@ -279,7 +279,6 @@
             this.Name = "FrmActualizaPeriodo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Actualizar     Periodo";
-            this.WindowState = System.Windows.Forms.FormWindowState.Normal;
             ((System.ComponentModel.ISupportInitialize)(this.dtg_PERIODOS)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
@@ -287,6 +286,7 @@
             this.grb_DatosNuevos.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
+
         }
 
         #endregion

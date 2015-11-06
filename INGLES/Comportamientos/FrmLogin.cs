@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using InglesEntity;
 namespace Ingles
 {
     public partial class FrmLogin
@@ -49,6 +49,57 @@ namespace Ingles
             this.txt_Password.BackColor = System.Drawing.Color.White;
         }
         #endregion
+
+
+        /// <summary>
+        /// 
+        /// </summary>
+        private void LoadCatalogos() { }
+        /// <summary>
+        /// Registra las validaciones pertinentes para cada control de captura.
+        /// </summary>
+        private void LoadValidation()
+        {
+            _validaciones.ErrorProvider = ErrP_Login;
+            _validaciones.Add(new ValidatorTextBoxRequired(this.txt_NameUser));
+            _validaciones.Add(new ValidatorTextBoxRequired(this.txt_Password));
+        }
+        /// <summary>
+        /// Envia la informacion capturada a la logica de negocio.
+        /// </summary>
+        private void DoSendInformation()
+        {
+            _validaciones.ExecuteValidation();// this is very important!!!   in this instruction we send to validate the controls of form 
+
+            if (_validaciones.IsValid)
+            {
+                _session = _bll.DoLogin(DoCaptureInformation());
+
+                if (_session != null)
+                {
+                    new PRINCIPAL(_session).Show();
+                    this.Hide();
+                }
+                else
+                {
+                    EscenaClearControles();
+                    EscenaCredencialesIncorrectas();
+                }
+
+
+            }
+        }
+
+
+        /// <summary>
+        /// Captura la informacion del los controles de usuario y 
+        /// </summary>
+        /// <returns></returns>
+        private Credentials DoCaptureInformation()
+        {
+            return new Credentials(this.txt_NameUser.Text, this.txt_Password.Text);
+        }
+
     }
 
 }

@@ -15,11 +15,12 @@ namespace Ingles
         {
             this.txt_Apellido_Materno.Enabled = true;
             this.txt_Apellido_Paterno.Enabled = true;
-            this.txt_Curp.Enabled = true;
+            //this.txt_Curp.Enabled = true;
             this.txt_NoControl.Enabled = true;
             this.txt_Nombre.Enabled = true;
             this.txt_RFC.Enabled = true;
             this.btn_Registrar.Enabled = false;
+            this.rdbInterno.Checked = true;
         }
         /// <summary>
         /// 
@@ -38,7 +39,7 @@ namespace Ingles
             EscenaStart();
             this.txt_Apellido_Materno.Text = String.Empty;
             this.txt_Apellido_Paterno.Text = String.Empty;
-            this.txt_Curp.Text = String.Empty;
+            //this.txt_Curp.Text = String.Empty;
             this.txt_NoControl.Text = String.Empty;
             this.txt_Nombre.Text = String.Empty;
             this.txt_RFC.Text = String.Empty;
@@ -50,6 +51,34 @@ namespace Ingles
         {
             EscenaClearControles();
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        private void EscenaForaneo()
+        {
+            txt_NoControl.Text = String.Empty;
+            txt_NoControl.Visible = false;
+            lbl_NOCONTROL.Visible = false;
+        }
+        /// <summary>
+        /// 
+        /// </summary>
+        private void EscenaInterno()
+        {
+            txt_NoControl.Text = String.Empty;
+            txt_NoControl.Visible = true;
+            lbl_NOCONTROL.Visible = true;
+        }
+        /// <summary>
+        /// habilita el ecenario en los controles para registrar un usuario de nuevo ingreso.
+        /// </summary>
+        private void EscenaNuevoIngreso()
+        {
+            this.txt_NoControl.Text = String.Empty;
+            this.lbl_NOCONTROL.Visible = false;
+            this.txt_NoControl.Visible = false;
+        }
+
         #endregion
 
 
@@ -65,10 +94,10 @@ namespace Ingles
             _validaciones.ErrorProvider = this.err_FrmRegistraAlumno;
             _validaciones.Add(new ValidatorTextBoxRequired(this.txt_Apellido_Materno));
             _validaciones.Add(new ValidatorTextBoxRequired(this.txt_Apellido_Paterno));
-            _validaciones.Add(new ValidatorTextBoxRequired(this.txt_Curp));
+            //_validaciones.Add(new ValidatorTextBoxRequired(this.txt_Curp));
             _validaciones.Add(new ValidatorTextBoxRequired(this.txt_NoControl));
             _validaciones.Add(new ValidatorTextBoxRequired(this.txt_Nombre));
-            _validaciones.Add(new ValidatorTextBoxCurp(this.txt_Curp));
+            //_validaciones.Add(new ValidatorTextBoxCurp(this.txt_Curp));
             _validaciones.Add(new ValidatorTextBoxEstado(this.txt_Apellido_Materno));
         }
         /// <summary>
@@ -82,7 +111,7 @@ namespace Ingles
                 NOMBRE = txt_Nombre.Text,
                 APELLIDO_MATERNO = txt_Apellido_Materno.Text,
                 APELLIDO_PATERNO = txt_Apellido_Paterno.Text,
-                CURP = txt_Curp.Text,
+                //CURP = txt_Curp.Text,
                 NO_CONTROL = txt_NoControl.Text
             };
         }
@@ -104,5 +133,7 @@ namespace Ingles
 
             }
         }
+
+
     }
 }

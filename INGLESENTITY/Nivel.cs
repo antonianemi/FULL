@@ -16,19 +16,7 @@ namespace InglesEntity
         private int _idPeriodo;
         private int _status;
 
-        /// <summary>
-        /// Constructor para abrir un nuevo periodo.
-        /// </summary>
-        /// <param name="obj">Representa el periodo que se va a abrir</param>
-        public Nivel(Periodo obj)
-        {
-
-        }
-
-        public Nivel()
-        {
-
-        }
+      
         /// <summary>
         /// REPRESENTA EL ID_NIVEL DEL NIVEL
         /// </summary>
@@ -42,7 +30,9 @@ namespace InglesEntity
                 return _idNivel;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public string DESCRIPCION
         {
             get
@@ -54,7 +44,9 @@ namespace InglesEntity
                 _descripcion = value;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public string MISION
         {
             get
@@ -66,7 +58,9 @@ namespace InglesEntity
                 _mision = value;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public string VISION
         {
             get
@@ -78,7 +72,9 @@ namespace InglesEntity
                 _vision = value;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public string OBJETIVO
         {
             get
@@ -90,7 +86,9 @@ namespace InglesEntity
                 _objetivo = value;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public string NIVEL
         {
             get
@@ -102,7 +100,9 @@ namespace InglesEntity
                 _nivel = value;
             }
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
         public int STATUS
         {
             get
@@ -114,21 +114,5 @@ namespace InglesEntity
                 _status = value;
             }
         }
-
-        public int ID_PERIODO
-        {
-            get
-            {
-                return _idPeriodo;
-            }
-            set
-            {
-                _idPeriodo = value;
-            }
-        }
-
-
-        ~Nivel() { }
-
     }
 }

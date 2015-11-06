@@ -52,6 +52,8 @@
     <Compile Include="CredentialsManagerDLL.cs" />
     <Compile Include="CursoManagerDLL.cs" />
     <Compile Include="Enumeraciones.cs" />
+    <Compile Include="GrupoManagerDLL.cs" />
+    <Compile Include="HelperFileManager.cs" />
     <Compile Include="HorarioManagerDLL.cs" />
     <Compile Include="NivelManagerDLL.cs" />
     <Compile Include="PeriodoManagerDLL.cs" />

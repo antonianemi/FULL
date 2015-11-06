@@ -117,4 +117,8 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="ARCHIVOALUMNOS" xml:space="preserve">
+    <value />
+    <comment>contiene la ruta completa de donde se encuentra alojado el archivo con los datos de los alumnos a importar.</comment>
+  </data>
 </root>

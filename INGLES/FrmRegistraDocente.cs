@@ -7,7 +7,7 @@ namespace Ingles
     {
         public FrmRegistraDocente()
         {
-            InitializeComponent();
+ InitializeComponent();
         }
 
 
@@ -24,8 +24,9 @@ namespace Ingles
            
         }
 
-     
+        private void grb_Datos_Alumno_Enter(object sender, EventArgs e)
+        {
 
-        
+        }
     }
 }

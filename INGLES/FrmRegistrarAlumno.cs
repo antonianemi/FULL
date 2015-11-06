@@ -33,7 +33,22 @@ namespace Ingles
         {   
             EscenaReadyForSave();
         }
-        
+
+        private void FORANEO(object sender, EventArgs e)
+        {
+            EscenaForaneo();
+        }
+
+        private void INTERNO(object sender, EventArgs e)
+        {
+            EscenaInterno();
+        }
+
+        private void NUEVOINGRESO(object sender, EventArgs e)
+        {
+            EscenaNuevoIngreso();
+        }
+
     }
 
 }

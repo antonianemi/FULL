@@ -23,4 +23,15 @@ namespace InglesEntity
         Inactivo=2,
             Baja=3
     }
+
+    public enum DIAS
+    {
+        LUNES=1,
+        MARTES=2,
+        MIERCOLES=3,
+        JUEVES=4,
+        VIERNES=5,
+        SABADO=6,
+        DOMINGO=7
+    }
 }

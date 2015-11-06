@@ -46,6 +46,7 @@
     <Compile Include="Credentials.cs" />
     <Compile Include="CuotaNivel.cs" />
     <Compile Include="Curso.cs" />
+    <Compile Include="Dia.cs" />
     <Compile Include="Docente.cs" />
     <Compile Include="Enumeraciones.cs" />
     <Compile Include="Funcion.cs" />

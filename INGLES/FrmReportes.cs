@@ -20,22 +20,7 @@ namespace Ingles
             InitializeComponent();
             dataGridView1.DataSource = new List<Horario>
         {
-            new Horario() {ID_HORARIO=1, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=2, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=3, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=4, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=5, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=6, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=7, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=8, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=9, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=10, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=11, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=12, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=13, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=14, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=15, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"},
-            new Horario() {ID_HORARIO=16, HORA_INI="12:00pm", HORA_FIN="1:00pm", FECHA="20/04/1991", DESCRIPCION="HORARIO DE VERANO"}
+            
         
         };
 
