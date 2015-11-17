@@ -7,33 +7,33 @@ using System.Speech.Synthesis;
 namespace Ingles
 {
 
-    public partial class FrmRegistrarAlumno : FormBase
+    public partial class FrmRegistraAlumno : FormBase
     {
         AlumnoManagerBLL bll;
 
-        public FrmRegistrarAlumno()
+        bool Interno = false;
+        bool InternoNuevoIngreso = false;
+        bool Foraneo = false;
+        bool ForaneoNuevoIngreso = false;
+
+        public FrmRegistraAlumno(Session obj):base(obj)
         {
             InitializeComponent();
             bll = new AlumnoManagerBLL();
-            LoadValidation();
+            ConfigureForm();
             EscenaStart();
         }
 
-        private void btn_Registrar_Click(object sender, EventArgs e)
+        private void REGISTRAR(object sender, EventArgs e)
         {
             DoSendInformation();
         }
 
-        private void btn_Cancelar_Click(object sender, EventArgs e)
+        private void CANCELAR(object sender, EventArgs e)
         {
             EscenaCancelar();      
         }
-
-        private void EscenaReadyForSave(object sender, EventArgs e)
-        {   
-            EscenaReadyForSave();
-        }
-
+        
         private void FORANEO(object sender, EventArgs e)
         {
             EscenaForaneo();
@@ -46,7 +46,14 @@ namespace Ingles
 
         private void NUEVOINGRESO(object sender, EventArgs e)
         {
-            EscenaNuevoIngreso();
+            if (chk_NuevoIngreso.Checked) {
+            EscenaInternoNuevoIngreso();
+            }
+            else
+            {
+                EscenaStart();
+            }
+                
         }
 
     }

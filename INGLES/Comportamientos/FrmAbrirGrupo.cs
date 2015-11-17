@@ -114,6 +114,8 @@ namespace Ingles
 
 
 
+
+
         /// <summary>
         /// 
         /// </summary>
@@ -125,7 +127,10 @@ namespace Ingles
         {
             /*Cargar los catalogos en los controles necesarios.*/
 
-            //this.cbm_Periodo.
+            this.cbm_Periodo.DataSource = TestEntity.getPeriodos();
+            this.cbm_Nivel.DisplayMember = "NIVEL";
+            this.cbm_Nivel.DataSource = TestEntity.getNiveles();
+            this.cbm_Periodo.DisplayMember = "PERIODO";
         }
         private void ClearCatalogos()
         {
@@ -155,18 +160,34 @@ namespace Ingles
         /// </summary>
         private void DoSendInformation()
         {
-            
+            try
+            {
+                _validaciones.ExecuteValidation();
+
+                if (_validaciones.IsValid)
+                {
+                    //bll.DoCreateAlumno(DoCaptureInformation());
+                    FrmPruebasDatos pruebas = new FrmPruebasDatos();
+                    pruebas.Asignar(DoCaptureInformation());
+                    pruebas.Show();
+                }
+            }
+            catch (Exception e)
+            {
+
+            }
         }
         /// <summary>
         /// 
         /// </summary>
         /// <returns></returns>
-        private Curso DoCapturaCurso()
+        private Curso DoCaptureInformation()
         {
             CursoBuilder obj = new CursoBuilder();
-            obj.Horario = DoCapturaHorario();
-            obj.Nivel = new Nivel();//Remplazarlo por la conversion del combo
-            obj.Periodo = new Periodo();//Replace for the convertion of combo
+            //obj.AsignarHorario(DoCapturaHorario());
+            //obj.AsignarNivel(new Nivel());
+            //obj.AsignarPeriodo(new Periodo());
+            obj.AgregarComentario(rtb_Comentarios.Text);
             return obj.GetCurso(); 
         }
         /// <summary>

@@ -31,7 +31,7 @@ namespace Ingles
             {
                 //Lanzar formulario para registrar baja de alumno.
                 this.Hide();
-                new FrmEliminaPeriodo().Show();
+                //new FrmEliminaPeriodo().Show();
             }
             if (rdb_Periodo_Registrar.Checked)
             {

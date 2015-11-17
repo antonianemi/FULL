@@ -22,17 +22,17 @@ namespace Ingles
             if (rdb_Nivel_Registrar.Checked)
             {
                 this.Hide();
-                new FrmRegistraNivel().Show();
+                //new FrmRegistraNivel().Show();
             }
             if (rdb_Nivel_Actualizar.Checked)
             {
                 this.Hide();
-                new FrmActualizaNivel().Show();
+                //new FrmActualizaNivel().Show();
             }
             if (rdb_Nivel_Baja.Checked)
             {
                 this.Hide();
-                new FrmEliminaNivel().Show();
+                //new FrmEliminaNivel().Show();
             }
         }
         private void btn_cancelar_Click(object sender, EventArgs e)

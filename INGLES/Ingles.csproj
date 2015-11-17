@@ -87,10 +87,13 @@
     <Compile Include="Comportamientos\FrmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Comportamientos\FrmRegistraDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Comportamientos\FrmRegistraPeriodo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Comportamientos\FrmRegistrarAlumno.cs">
+    <Compile Include="Comportamientos\FrmRegistraAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CustomClass.cs">
@@ -219,6 +222,12 @@
     <Compile Include="FrmPeriodoPrincipal.Designer.cs">
       <DependentUpon>FrmPeriodoPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPruebasDatos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPruebasDatos.Designer.cs">
+      <DependentUpon>FrmPruebasDatos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRegistraDocente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -237,11 +246,11 @@
     <Compile Include="FrmRegistraPeriodo.Designer.cs">
       <DependentUpon>FrmRegistraPeriodo.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmRegistrarAlumno.cs">
+    <Compile Include="FrmRegistraAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmRegistrarAlumno.Designer.cs">
-      <DependentUpon>FrmRegistrarAlumno.cs</DependentUpon>
+    <Compile Include="FrmRegistraAlumno.Designer.cs">
+      <DependentUpon>FrmRegistraAlumno.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmReportes.cs">
       <SubType>Form</SubType>
@@ -335,6 +344,9 @@
     <EmbeddedResource Include="FrmPeriodoPrincipal.resx">
       <DependentUpon>FrmPeriodoPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmPruebasDatos.resx">
+      <DependentUpon>FrmPruebasDatos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRegistraDocente.resx">
       <DependentUpon>FrmRegistraDocente.cs</DependentUpon>
     </EmbeddedResource>
@@ -344,8 +356,8 @@
     <EmbeddedResource Include="FrmRegistraPeriodo.resx">
       <DependentUpon>FrmRegistraPeriodo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmRegistrarAlumno.resx">
-      <DependentUpon>FrmRegistrarAlumno.cs</DependentUpon>
+    <EmbeddedResource Include="FrmRegistraAlumno.resx">
+      <DependentUpon>FrmRegistraAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReportes.resx">
       <DependentUpon>FrmReportes.cs</DependentUpon>

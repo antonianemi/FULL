@@ -13,13 +13,17 @@ namespace Ingles
     public partial class FrmAbrirGrupo : FormBase
     {
         GrupoManagerBLL _bll;
-        public FrmAbrirGrupo()
+        PeriodoManagerBLL _PeriodoBLL;
+        CursoManagerBLL _CursoBLL;
+        public FrmAbrirGrupo(Session obj):base(obj)
         {
             InitializeComponent();
             _bll = new GrupoManagerBLL();
+            _PeriodoBLL = new PeriodoManagerBLL();
+            _CursoBLL = new CursoManagerBLL();
+            ConfigureForm();
             EscenarioStart();
-        }
-        
+        }        
         /// <summary>
         /// 
         /// </summary>
@@ -131,6 +135,5 @@ namespace Ingles
         {
             
         }
-       
     }
 }

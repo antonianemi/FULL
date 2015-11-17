@@ -1,23 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using InglesBLL;
 using InglesEntity;
-using Microsoft.Office.Interop.Excel; 
 
 namespace Ingles
 {
-    public partial class FrmReportes : Form
+    public partial class FrmReportes : FormBase
     {
 
-        public FrmReportes()
+        public FrmReportes(Session obj):base(obj)
         {
             InitializeComponent();
+            ConfigureForm();
             dataGridView1.DataSource = new List<Horario>
         {
             

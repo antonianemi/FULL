@@ -59,14 +59,7 @@ namespace Ingles
         }
         #endregion
 
-        #region FUNCIONES PRINCIPALES
-        /// <summary>
-        /// 
-        /// </summary>
-        private void CondigureForm()
-        {
-            this.Text = String.Format("[{0}]   [Host {1}]", User.FullName, Environment.MachineName);
-        }
+        #region FUNCIONES PRINCIPALES 
         /// <summary>
         /// 
         /// </summary>

@@ -12,13 +12,14 @@ using InglesEntity;
 
 namespace Ingles
 {
-    public partial class FrmEliminaPeriodo : Form
+    public partial class FrmEliminaPeriodo : FormBase
     {
         BLL objbll = null;
-        public FrmEliminaPeriodo()
+        public FrmEliminaPeriodo(Session obj):base(obj)
         {
             InitializeComponent();
             objbll = new BLL();
+            ConfigureForm();
             Inicialize();
         }
         /// <summary>

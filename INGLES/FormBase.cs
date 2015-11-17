@@ -58,6 +58,13 @@ namespace Ingles
             else            
                 return false;
         }
+        /// <summary>
+        /// Asigna el nombre del usuario y la ip del equipo en la parte superior de la pantalla.
+        /// </summary>
+        protected virtual void ConfigureForm()
+        {
+            this.Text = String.Format("[{0}]   [Host {1}]", User.FullName, Environment.MachineName);
+        }
     }
 
 
@@ -257,8 +264,6 @@ namespace Ingles
         }
         #endregion
     }
-
-
     public class ValidatorTextBoxRequired: ItemValidar
     {
         public ValidatorTextBoxRequired(TextBox control) : base(control)

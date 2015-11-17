@@ -1,32 +1,29 @@
 ﻿using System;
 using System.Windows.Forms;
+using InglesEntity;
+using InglesBLL;
 
 namespace Ingles
 {
-    public partial class FrmRegistraDocente : Form
+    public partial class FrmRegistraDocente : FormBase
     {
-        public FrmRegistraDocente()
+        DocenteManagerBLL _bll;   
+        public FrmRegistraDocente(Session obj):base(obj)
         {
- InitializeComponent();
+         InitializeComponent();
+            ConfigureForm();
+            _bll = new DocenteManagerBLL();
         }
 
-
-        
-
-        private void btn_Registrar_Click(object sender, EventArgs e)
+        private void REGISTRAR(object sender, EventArgs e)
         {
-            //Armarobjeto de tipo docente y ejecutar su llamada a guardar en la base de datos.
-
+            DoSendInformation();
         }
 
-        private void btn_Cancelar_Click(object sender, EventArgs e)
+        private void CANCELAR(object sender, EventArgs e)
         {
-           
+           /*Codigo limpiar los */
         }
 
-        private void grb_Datos_Alumno_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

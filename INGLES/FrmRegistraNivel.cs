@@ -93,27 +93,27 @@ namespace Ingles
             _periodoselecionado = (Periodo)((ComboBox)sender).SelectedItem;
            //_nivelesDisponibles = bll.nivelesDisponibles(_periodoselecionado);
             limpiaControles(1);
-            cargaCatNiveles();
-            cargaNivelesPeriodos();
+            //cargaCatNiveles();
+            //cargaNivelesPeriodos();
         }
         
-        private void cargaCatNiveles()
-        {
-            foreach (Nivel nivel in _nivelesDisponibles)
-            {
-                lst_NIVELES.Items.Add(nivel);
-            }
-            lst_NIVELES.DisplayMember = "NIVEL";
-        }
+        //private void cargaCatNiveles()
+        //{
+        //    foreach (Nivel nivel in _nivelesDisponibles)
+        //    {
+        //        lst_NIVELES.Items.Add(nivel);
+        //    }
+        //    lst_NIVELES.DisplayMember = "NIVEL";
+        //}
 
-        private void cargaNivelesPeriodos()
-        {
-            foreach (Nivel nivel in _periodoselecionado.NIVELES)
-            {
-                lst_NIVELES_PERIODOS.Items.Add(nivel);
-            }
-            lst_NIVELES_PERIODOS.DisplayMember = "NIVEL";
-        }
+        //private void cargaNivelesPeriodos()
+        //{
+        //    foreach (Nivel nivel in _periodoselecionado.NIVELES)
+        //    {
+        //        lst_NIVELES_PERIODOS.Items.Add(nivel);
+        //    }
+        //    lst_NIVELES_PERIODOS.DisplayMember = "NIVEL";
+        //}
 
         private void btn_uitaNieveles_Click(object sender, EventArgs e)
         {
@@ -132,10 +132,10 @@ namespace Ingles
             // Aqui solo necesito un metodo a donde yo le pase el periodo con los nuevos objetos nivel que quiero que contenga.
             // Ese metodo debe hacerme la chamba de actualizar esos periodos en la base de datos.
 
-            foreach (var item in lst_NIVELES_PERIODOS.Items)
-            {
-             _periodoselecionado.NIVELES.Add((Nivel)item);
-            }           
+            //foreach (var item in lst_NIVELES_PERIODOS.Items)
+            //{
+            // _periodoselecionado.NIVELES.Add((Nivel)item);
+            //}           
 
            //bll.actualizaNivelesPeriodo(_periodoselecionado);
 

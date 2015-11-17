@@ -1,4 +1,4 @@
-﻿namespace INGLES
+﻿namespace Ingles
 {
     partial class FrmCalificaAlumnos
     {

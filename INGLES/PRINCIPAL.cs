@@ -138,7 +138,7 @@ namespace Ingles
         private void OP_UPDATEPERIODO(object sender, EventArgs e)
         {
         try{
-            FrmEliminaPeriodo childForm = new FrmEliminaPeriodo();
+            FrmEliminaPeriodo childForm = new FrmEliminaPeriodo(_Session);
             childForm.MdiParent = this;
             //childForm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             childForm.Show();
@@ -178,7 +178,7 @@ namespace Ingles
         private void eliminarNivelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try{
-            FrmEliminaNivel childForm = new FrmEliminaNivel();
+            FrmEliminaNivel childForm = new FrmEliminaNivel(_Session);
             childForm.MdiParent = this;
             //childForm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             childForm.Show();
@@ -193,7 +193,7 @@ namespace Ingles
             try
             {
                          
-                FrmActualizaNivel childForm = new FrmActualizaNivel();
+                FrmActualizaNivel childForm = new FrmActualizaNivel(_Session);
                 childForm.MdiParent = this;
                 //childForm.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
                 childForm.Show();
@@ -256,37 +256,47 @@ namespace Ingles
 
         }
 
-
-
-
-        private void registrarAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void REGISTRAR_ALUMNO(object sender, EventArgs e)
         {
-
+            try
+            {
+                FrmRegistraAlumno childForm = new FrmRegistraAlumno(_Session);
+                childForm.MdiParent = this;
+                childForm.Show();
+            }
+            catch (Exception ex)
+            {
+                showMessage(ex.Message);
+            }
         }
-
-
 
         private void actualizarInformacionAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-
-
         private void actualizarInformacionEstatusAlumnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
-
-
-
 
         private void consultaDeCalificacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
-
-
+        private void abrirCursoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                FrmAbrirGrupo childForm = new FrmAbrirGrupo(_Session);
+                childForm.MdiParent = this;
+                childForm.Show();
+            }
+            catch (Exception ex)
+            {
+                showMessage(ex.Message);
+            }
+        }
     }
 }

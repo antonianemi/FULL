@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using InglesBLL;
+using InglesEntity;
 
-namespace INGLES
+namespace Ingles
 {
-    public partial class FrmImportarAlunos : Form
+    public partial class FrmImportarAlunos : FormBase
     {
-        public FrmImportarAlunos()
+        public FrmImportarAlunos(Session obj):base(obj)
         {
             InitializeComponent();
+            ConfigureForm();
         }
 
         private void button1_Click(object sender, EventArgs e)

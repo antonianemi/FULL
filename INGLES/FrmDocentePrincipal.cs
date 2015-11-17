@@ -16,19 +16,19 @@ namespace Ingles
             if (rdb_Docente_Registrar.Checked)
             {
                 this.Hide();
-                new FrmRegistraDocente().Show();
+                //new FrmRegistraDocente().Show();
             }
 
             if (rdb_Docente_Actualizar.Checked)
             {
                 this.Hide();
-                new FrmActualizaDocente().Show();
+                //new FrmActualizaDocente().Show();
             }
 
             if (rdb_Docente_Baja.Checked)
             {
                 this.Hide();
-                new FrmEliminaDocente().Show();
+                //new FrmEliminaDocente().Show();
             }
           
         }

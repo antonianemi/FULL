@@ -10,14 +10,14 @@ using InglesEntity;
 
 namespace Ingles
 {
-    public partial class FrmInscripcion : Form
+    public partial class FrmInscripcion : FormBase
     {
         private BindingSource bindingSource1 = new BindingSource();
 
         public FrmInscripcion()
         {
             InitializeComponent();
-
+            ConfigureForm();
             dataGridView1.AutoGenerateColumns = false;
             dataGridView1.AutoSize = true;
             dataGridView1.DataSource = bindingSource1;
@@ -51,7 +51,7 @@ namespace Ingles
 
         private void SELECCIONARCURSO(object sender, EventArgs e)
         {
-            new FrmSelectedCurso().Show();
+            //new FrmSelectedCurso().Show();
         }
 
         private void INSCRIBIR(object sender, EventArgs e)

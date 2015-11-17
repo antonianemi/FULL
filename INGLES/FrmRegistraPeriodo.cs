@@ -14,7 +14,7 @@ namespace Ingles
         {
             InitializeComponent();
            _bll = new PeriodoManagerBLL();
-            CondigureForm();
+            ConfigureForm();
             EscenaStart();
         }        
         private void Cancelar(object sender, EventArgs e)

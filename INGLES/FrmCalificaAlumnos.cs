@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
+using InglesBLL;
+using InglesEntity;
 
-namespace INGLES
+namespace Ingles
 {
-    public partial class FrmCalificaAlumnos : Form
+    public partial class FrmCalificaAlumnos : FormBase
     {
-        public FrmCalificaAlumnos()
+        public FrmCalificaAlumnos(Session obj):base(obj)
         {
             InitializeComponent();
+            ConfigureForm();
         }
 
       

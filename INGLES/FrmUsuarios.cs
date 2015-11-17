@@ -1,19 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Windows.Forms;
+﻿using InglesBLL;
+using InglesEntity;
 
 namespace Ingles
 {
-    public partial class FrmUsuarios : Form
+    public partial class FrmUsuarios : FormBase
     {
-        public FrmUsuarios()
+        public FrmUsuarios(Session obj) : base(obj)
         {
             InitializeComponent();
+            ConfigureForm();
         }
     }
 }

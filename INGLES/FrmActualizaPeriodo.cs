@@ -26,6 +26,7 @@ namespace Ingles
         {
             InitializeComponent();
             objbll = new BLL();
+            ConfigureForm();
             EscenaStart();
         } 
         /// <summary>
