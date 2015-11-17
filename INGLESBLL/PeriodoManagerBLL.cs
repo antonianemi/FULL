@@ -22,28 +22,8 @@ namespace InglesBLL
         /// <param name="obj"></param>
         public void NewPeriodoSinNiveles(Periodo obj)
         {
-            obj.NIVELES = null;//se asegura de que no se registren niveles con este periodo
             obj.STATUS = estatusPeriodo.Activo;// registra el periodo como activo
             _dll.AddPeriodo(obj);
-        }
-        /// <summary>
-        /// Registra un Nuevo Periodo Con niveles en la base de datos.
-        /// Se asegura de insertarlos con niveles, de no tener niveles el periodo que se mando a guardar, este
-        /// rechaza la solicitud y notifica al objeto cliente el error ocurrido, esto mediante un mensaje de excepcion.
-        /// </summary>
-        /// <param name="obj">Representa el Periodo con </param>
-        public void NewPeriodoConNiveles(Periodo obj)
-        {
-            if(obj.NIVELES != null && obj.NIVELES.Count > 0){
-                obj.STATUS = estatusPeriodo.Activo;
-                _dll.AddPeriodo(obj);
-            }
-            else
-            {
-                throw new Exception("Por Favor Especifique almenos un Nivel Para este Periodo");
-            }
-
-            
         }
         /// <summary>
         /// Cambia el Estatus de un Periodo Para Darlo de Baja.

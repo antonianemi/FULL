@@ -20,6 +20,7 @@ namespace InglesBLL
         public HorarioBuilder()
         {
             _Horario = new Horario();
+            _Horario.Dias = new List<Dia>();
         }
         /// <summary>
         /// Add a new course in 

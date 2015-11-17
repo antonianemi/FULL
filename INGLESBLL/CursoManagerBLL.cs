@@ -21,12 +21,7 @@ namespace InglesBLL
         public Curso GenerarCurso()
         {
             CursoBuilder curso = new CursoBuilder();
-
-            ///Preparar curso
-            curso.Horario = new Horario();
-
-            curso.BuildCurso();
-
+            curso.AsignarHorario(new Horario());
             return curso.GetCurso();
         }
     }
