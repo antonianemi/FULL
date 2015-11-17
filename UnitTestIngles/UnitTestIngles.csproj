@@ -52,6 +52,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="UnitTestFormatDate.cs" />
     <Compile Include="UnitTestAutenticationManagerBLL.cs" />
     <Compile Include="UnitTestCargaMasivaAlumnos.cs" />
     <Compile Include="UnitTestDocenteManagerBLL.cs" />

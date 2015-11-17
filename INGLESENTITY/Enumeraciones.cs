@@ -34,4 +34,14 @@ namespace InglesEntity
         SABADO=6,
         DOMINGO=7
     }
+
+    public enum TIPOALUMNO
+    {
+        Interno = 1,
+        InternoNuevoIngreso = 2,
+        Foraneo = 3,
+        ForaneoNuevoIngreso = 5
+    }
+
+
 }

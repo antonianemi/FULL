@@ -51,6 +51,7 @@
     <Compile Include="CarreraManagerDLL.cs" />
     <Compile Include="CredentialsManagerDLL.cs" />
     <Compile Include="CursoManagerDLL.cs" />
+    <Compile Include="DocenteManagerDLL.cs" />
     <Compile Include="Enumeraciones.cs" />
     <Compile Include="GrupoManagerDLL.cs" />
     <Compile Include="HelperFileManager.cs" />

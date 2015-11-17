@@ -5,45 +5,59 @@ namespace InglesEntity
     /// <summary>
     /// Representa un alumno en el sistema.
     /// </summary>
-    public class Alumno:Persona
+    public class Alumno
     {
-        private int _idalumno;
-        private string _carrera;
-        private string _nocontrol;
         public int ID_ALUMNO
         {
-            get
-            {
-                return _idalumno;
-            }
-            set
-            {
-                _idalumno = value;
-            }
+            set; get;
         }
         public string CARRERA
         {
-            get
-            {
-                return _carrera.ToUpperInvariant();
-            }
-            set
-            {
-                _carrera = value;
-            }
+            set; get;
         }
         public string NO_CONTROL
         {
-            get
-            {
-                return _nocontrol.ToUpperInvariant();
-            }
-            set
-            {
-                _nocontrol = value;
-            }
+            set; get;
         }
-
-        ~Alumno(){}
+        public string FECHANACIMIENTO
+        {
+            set; get;
+        }
+        public string NOMBRE
+        {
+            set; get;
+        }
+        public string RFC
+        {
+            set; get;
+        }
+        public string CURP
+        {
+            set; get;
+        }
+        public string APELLIDO_PATERNO
+        {
+            set; get;
+        }
+        public string DOMICILIO
+        {
+            set; get;
+        }
+        public string SEMESTRE
+        {
+            set; get;
+        }
+        public string APELLIDO_MATERNO
+        {
+            set; get;
+        }
+        public int ID_PERSONA
+        {
+            set; get;
+        }
+        public TIPOALUMNO TIPOALUMNO
+        {
+            set; get;
+        }
     }
 }
