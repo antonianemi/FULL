@@ -11,6 +11,11 @@ namespace InglesBLL
     public class AutenticationManagerBLL:BaseBusiness
     {
         AutenticationManagerDLL _dll;
+        Credentials _credencialescurrent;
+        Usuario _usuario;
+        Session _sesion;
+        
+        public Session _SESION { get { return _sesion; } }
 
         public AutenticationManagerBLL()
         {
@@ -24,18 +29,42 @@ namespace InglesBLL
         /// <returns></returns>
         public Session DoLogin(Credentials obj)
         {
-            Session sesion = new Session();
-
-            sesion = _dll.DoLogin(obj);
-
+            _credencialescurrent = obj;
+            
+            
+            _usuario = _dll.GetCredenciales(obj);
+            DoAutenticar();
             if (_dll.ExistError)
             {
                 _dll.CodeError = Errores.PasswordIncorrecto;
                 _dll.MessageError = "";
             }
             
-            sesion.Status = STATUSSESSION.Open;
-            return sesion;
+            _sesion.Status = STATUSSESSION.Open;
+            return _sesion;
+        }
+
+        private void DoAutenticar()
+        {
+            if (_credencialescurrent.Username == _usuario.username && _credencialescurrent.Password == _usuario.password)
+            {
+                doGenerarSesion();
+            }
+            else
+            {
+                ExistError = true;
+                MessageError = "Usuario y password incorrecto";
+            }
+                
+        }
+
+        private void doGenerarSesion()
+        {
+            _sesion = new Session();
+            _sesion.User = _usuario;
+            _sesion.IdSession = 1;//este numero va a ser generado por autenticationmanagerdll.getsesionid()
+            _sesion.Status = STATUSSESSION.Open;
+            _sesion.FechaInicio = DateTime.Now;
         }
 
         /// <summary>

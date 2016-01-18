@@ -289,9 +289,9 @@ namespace Ingles
         {
             try
             {
-                FrmAbrirGrupo childForm = new FrmAbrirGrupo(_Session);
-                childForm.MdiParent = this;
-                childForm.Show();
+                //FrmAbrirGrupo childForm = new FrmAbrirGrupo(_Session);
+                //childForm.MdiParent = this;
+                //childForm.Show();
             }
             catch (Exception ex)
             {

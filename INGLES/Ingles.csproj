@@ -99,12 +99,6 @@
     <Compile Include="CustomClass.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="FrmAbrirGrupo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAbrirGrupo.Designer.cs">
-      <DependentUpon>FrmAbrirGrupo.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormBase.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -264,12 +258,6 @@
     <Compile Include="FrmRespaldos.Designer.cs">
       <DependentUpon>FrmRespaldos.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmSelectedCurso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmSelectedCurso.Designer.cs">
-      <DependentUpon>FrmSelectedCurso.cs</DependentUpon>
-    </Compile>
     <Compile Include="FrmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,9 +272,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FrmAbrirGrupo.resx">
-      <DependentUpon>FrmAbrirGrupo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FrmAccesos.resx">
       <DependentUpon>FrmAccesos.cs</DependentUpon>
     </EmbeddedResource>
@@ -361,9 +346,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReportes.resx">
       <DependentUpon>FrmReportes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmSelectedCurso.resx">
-      <DependentUpon>FrmSelectedCurso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PRINCIPAL.resx">
       <DependentUpon>PRINCIPAL.cs</DependentUpon>

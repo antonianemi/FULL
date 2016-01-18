@@ -24,8 +24,9 @@ namespace UnitTestIngles
         {
             AutenticationManagerBLL obj = new AutenticationManagerBLL();
             
-            Credentials _credential = new Credentials("antonio", "cortes");
-            Assert.IsNotNull(obj.DoLogin(_credential));
+            Credentials _credential = new Credentials("Tom", "Misaki");
+            obj.DoLogin(_credential);
+            Assert.IsNotNull(obj._SESION);
 
 
 

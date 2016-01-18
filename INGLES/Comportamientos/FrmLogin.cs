@@ -73,8 +73,11 @@ namespace Ingles
 
             if (_validaciones.IsValid)
             {
+                //Credentials _Credenciales=new Credenciales();
                 _session = _bll.DoLogin(DoCaptureInformation());
-
+                //_BLL.getCredenciales(DoCaptureInformation());
+                //if(credencialesisvalid()) crearsesion;
+                
                 if (_session != null)
                 {
                     new PRINCIPAL(_session).Show();

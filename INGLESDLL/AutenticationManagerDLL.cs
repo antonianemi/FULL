@@ -23,17 +23,21 @@ namespace InglesDLL
         /// con la fecha y hora. y retornar el id de session de la misma.
         /// </summary>
         /// <param name="obj"></param>
-        public Session DoLogin(Credentials obj)
+        public Usuario GetCredenciales(Credentials obj)
         {
-            Session session = null;           
-            session = new Session();
-            Usuario user = new Usuario();
-            user.Nombre = "Silvester";
-            user.ApellidoPaterno = "Stallone";
-            user.ApellidoMaterno = "Balboa";
-            session.User = user;
-            session.IdSession = 1;
-            return session;
+
+            //Usuario user = new Usuario();
+            //user.Nombre = "";
+            //user.ApellidoPaterno = "Stallone";
+            //user.ApellidoMaterno = "Balboa";
+
+            Usuario user1 = new Usuario();
+            user1.Nombre = "Tom";
+            user1.ApellidoPaterno = "Misaki";
+            user1.ApellidoMaterno = "Yunei";
+            user1.username = "Tom";
+            user1.password = "Misaki";
+            return user1;
         }
 
 
